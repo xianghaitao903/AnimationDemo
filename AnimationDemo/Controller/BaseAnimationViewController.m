@@ -5,9 +5,8 @@
 
 #import "BaseAnimationViewController.h"
 #import "UIButton+Customize.h"
+#import "FrameTool.h"
 
-#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 @interface BaseAnimationViewController()
 
 @property (strong, nonatomic) UIView *animationView;
@@ -35,7 +34,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self initEvent];
+    [self initEvents];
 }
 
 #pragma mark - initialize event
@@ -49,15 +48,16 @@
 }
 
 - (void)setLayout {
+    CGFloat startOffset =  (CGFloat) (SCREEN_HEIGHT - 150.0);
     self.animationView.frame          = CGRectMake(10.0,180.0,50.0,50.0);
-    self.moveAnimationButton.frame    = [self frameForButtonAtIndex:0];
-    self.alphaAnimationButton.frame   = [self frameForButtonAtIndex:1];
-    self.scaleAnimationButton.frame   = [self frameForButtonAtIndex:2];
-    self.revolveAnimationButton.frame = [self frameForButtonAtIndex:3];
-    self.colorAnimationButton.frame   = [self frameForButtonAtIndex:4];
+    self.moveAnimationButton.frame    = [FrameTool frameForButtonAtIndex:0 startOffsetY:startOffset];
+    self.alphaAnimationButton.frame   = [FrameTool frameForButtonAtIndex:1 startOffsetY:startOffset];
+    self.scaleAnimationButton.frame   = [FrameTool frameForButtonAtIndex:2  startOffsetY:startOffset];
+    self.revolveAnimationButton.frame = [FrameTool frameForButtonAtIndex:3  startOffsetY:startOffset];
+    self.colorAnimationButton.frame   = [FrameTool frameForButtonAtIndex:4  startOffsetY:startOffset];
 }
 
-- (void)initEvent {
+- (void)initEvents {
     [self.moveAnimationButton addTarget:self
                                  action:@selector(executeMoveAnimation)
                        forControlEvents:UIControlEventTouchUpInside];
@@ -123,18 +123,6 @@
     animation.toValue = (id) [UIColor blueColor].CGColor;
     animation.duration = 1.0f;
     [self.animationView.layer addAnimation:animation forKey:@"colorAnimation"];
-
-}
-
-#pragma mark - private methods
-- (CGRect)frameForButtonAtIndex:(NSInteger )index {
-    CGFloat offsetY = (CGFloat) (SCREEN_HEIGHT - 150.0);
-    CGFloat width = 50.0f;
-    CGFloat height = 44.0f;
-    NSInteger totalButtonAtLine = (NSInteger) (SCREEN_WIDTH/(width + 10));
-    CGFloat offsetX = 10 + (10 + width) * (index%totalButtonAtLine);
-    offsetY += 10 + height * (index/totalButtonAtLine);
-    return CGRectMake(offsetX,offsetY,width,height);
 }
 
 #pragma mark - getter and setter

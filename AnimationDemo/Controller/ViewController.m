@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "BaseAnimationViewController.h"
+#import "KeyFrameAnimationViewController.h"
+#import "GroupAnimationViewController.h"
+#import "TransitionAnimationViewController.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -56,8 +59,16 @@
                                                  animated:YES];
             break;
         case 1:
-//            [self.navigationController pushViewController:[BaseAnimationViewController new]
-//                                                 animated:YES];
+            [self.navigationController pushViewController:[KeyFrameAnimationViewController new]
+                                                 animated:YES];
+            break;
+        case 2:
+            [self.navigationController pushViewController:[GroupAnimationViewController new]
+                                                 animated:YES];
+            break;
+        case 3:
+            [self.navigationController pushViewController:[TransitionAnimationViewController new]
+                                                 animated:YES];
             break;
         default:
             break;
@@ -68,6 +79,9 @@
 #pragma mark - getter and setter
 
 - (UITableView *)tableView {
+    if (_tableView) {
+        return _tableView;
+    }
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
@@ -79,8 +93,11 @@
 }
 
 - (NSArray *)dataArr {
-    NSArray *arr = @[@"baseAnimation",@"",@""];
-    return arr;
+    if (_dataArr) {
+        return _dataArr;
+    }
+    _dataArr = @[@"CABaseAnimation",@"CAKeyframeAnimation",@"CAAnimationGroup",@"CATransition"];
+    return _dataArr;
 }
 
 @end

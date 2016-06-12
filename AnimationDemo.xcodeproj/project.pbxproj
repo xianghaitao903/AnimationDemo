@@ -12,6 +12,10 @@
 		95077E781CCF039400C9EA66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95077E771CCF039400C9EA66 /* Assets.xcassets */; };
 		95077E861CCF039400C9EA66 /* AnimationDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95077E851CCF039400C9EA66 /* AnimationDemoTests.m */; };
 		95077E921CCF170700C9EA66 /* UIButton+Customize.m in Sources */ = {isa = PBXBuildFile; fileRef = 95077E911CCF170700C9EA66 /* UIButton+Customize.m */; };
+		950821031CD1E904001B74D9 /* KeyFrameAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950821021CD1E904001B74D9 /* KeyFrameAnimationViewController.m */; };
+		950821071CD1ECDE001B74D9 /* FrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 950821061CD1ECDE001B74D9 /* FrameTool.m */; };
+		9508210A1CD20A5A001B74D9 /* GroupAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 950821091CD20A5A001B74D9 /* GroupAnimationViewController.m */; };
+		9508210D1CD398C0001B74D9 /* TransitionAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9508210C1CD398C0001B74D9 /* TransitionAnimationViewController.m */; };
 		CDA4C1A934BE90A93B6FB683 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA4C33F68BD98CDD9118CD1 /* LaunchScreen.storyboard */; };
 		CDA4C6D704B315F299215A40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA4CF7E47417E6738016B70 /* ViewController.m */; };
 		CDA4CCCB1B485B1A4CAFC776 /* BaseAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA4C92DC9B3AB2AA5D0FC8E /* BaseAnimationViewController.m */; };
@@ -38,6 +42,14 @@
 		95077E871CCF039400C9EA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95077E901CCF170700C9EA66 /* UIButton+Customize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Customize.h"; sourceTree = "<group>"; };
 		95077E911CCF170700C9EA66 /* UIButton+Customize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Customize.m"; sourceTree = "<group>"; };
+		950821011CD1E904001B74D9 /* KeyFrameAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyFrameAnimationViewController.h; sourceTree = "<group>"; };
+		950821021CD1E904001B74D9 /* KeyFrameAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyFrameAnimationViewController.m; sourceTree = "<group>"; };
+		950821051CD1ECDE001B74D9 /* FrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameTool.h; sourceTree = "<group>"; };
+		950821061CD1ECDE001B74D9 /* FrameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameTool.m; sourceTree = "<group>"; };
+		950821081CD20A5A001B74D9 /* GroupAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupAnimationViewController.h; sourceTree = "<group>"; };
+		950821091CD20A5A001B74D9 /* GroupAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupAnimationViewController.m; sourceTree = "<group>"; };
+		9508210B1CD398C0001B74D9 /* TransitionAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimationViewController.h; sourceTree = "<group>"; };
+		9508210C1CD398C0001B74D9 /* TransitionAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimationViewController.m; sourceTree = "<group>"; };
 		CDA4C74157487088DEAB2918 /* BaseAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimationViewController.h; sourceTree = "<group>"; };
 		CDA4C76CFFAA4EED41F85CA9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CDA4C9242583B39D4C2C0829 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -91,6 +103,7 @@
 				95077E6B1CCF039400C9EA66 /* Supporting Files */,
 				CDA4C29DF80909DE92E7CAED /* Controller */,
 				CDA4C05B650BAAF545182FD6 /* Catogory */,
+				CDA4CCD8B6362EC3DD437A40 /* Tools */,
 			);
 			path = AnimationDemo;
 			sourceTree = "<group>";
@@ -130,8 +143,23 @@
 				CDA4CF7E47417E6738016B70 /* ViewController.m */,
 				CDA4C74157487088DEAB2918 /* BaseAnimationViewController.h */,
 				CDA4C92DC9B3AB2AA5D0FC8E /* BaseAnimationViewController.m */,
+				950821011CD1E904001B74D9 /* KeyFrameAnimationViewController.h */,
+				950821021CD1E904001B74D9 /* KeyFrameAnimationViewController.m */,
+				950821081CD20A5A001B74D9 /* GroupAnimationViewController.h */,
+				950821091CD20A5A001B74D9 /* GroupAnimationViewController.m */,
+				9508210B1CD398C0001B74D9 /* TransitionAnimationViewController.h */,
+				9508210C1CD398C0001B74D9 /* TransitionAnimationViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CDA4CCD8B6362EC3DD437A40 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				950821051CD1ECDE001B74D9 /* FrameTool.h */,
+				950821061CD1ECDE001B74D9 /* FrameTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +263,11 @@
 			files = (
 				95077E701CCF039400C9EA66 /* AppDelegate.m in Sources */,
 				95077E6D1CCF039400C9EA66 /* main.m in Sources */,
+				9508210D1CD398C0001B74D9 /* TransitionAnimationViewController.m in Sources */,
 				95077E921CCF170700C9EA66 /* UIButton+Customize.m in Sources */,
+				950821031CD1E904001B74D9 /* KeyFrameAnimationViewController.m in Sources */,
+				950821071CD1ECDE001B74D9 /* FrameTool.m in Sources */,
+				9508210A1CD20A5A001B74D9 /* GroupAnimationViewController.m in Sources */,
 				CDA4C6D704B315F299215A40 /* ViewController.m in Sources */,
 				CDA4CCCB1B485B1A4CAFC776 /* BaseAnimationViewController.m in Sources */,
 			);

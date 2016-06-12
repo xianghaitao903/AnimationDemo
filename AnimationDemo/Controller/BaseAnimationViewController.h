@@ -5,7 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface BaseAnimationViewController : UIViewController
 
 @end
