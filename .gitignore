@@ -52,3 +52,5 @@ fastlane/report.xml
 fastlane/screenshots
 #idea
 .idea
+
+/iOSInjectionProject
